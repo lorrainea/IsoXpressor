@@ -33,7 +33,7 @@ optional arguments:
                         Length of seed in bp for REAL (default: 32).
   -a STATISTICAL_ANALYSIS, --statistical_analysis STATISTICAL_ANALYSIS
                         'TPM' (Transcripts Per Kilobase Million) or 'RPKM'
-                        (Reads Per Kilobase Million) (default: TPKM).
+                        (Reads Per Kilobase Million) (default: 'TPM').
   -t THREADS, --threads THREADS
                         Number of threads to use (default: 1).
 
