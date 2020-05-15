@@ -1,0 +1,17 @@
+Pre-installation Instructions
+=============================
+
+   This installation requires the pre-installation of a C++ compiler, 
+the cmake build system, and the libraries: boost and SeqAn.
+
+For Linux, you can install these libraries via
+
+ $ ./pre-install.sh 
+
+Basic Instructions
+==================
+
+   
+After installation you can call IsoXtractor from this directory via
+
+ $ python IsoXtractor.py -h
