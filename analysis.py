@@ -25,7 +25,7 @@ def parseArgs():
 	parser.add_argument('-a', '--statistical_analysis', type=str, required=False, help="'TPM' (Transcripts Per Kilobase Million) or 'RPKM' (Reads Per Kilobase Million) (default: 'TPM').")
 	args = parser.parse_args()
 
-	if args.statistical_analysis != "TPM" or args.statistical_analysis != "RPKM":
+	if args.statistical_analysis != "TPM" and args.statistical_analysis != "RPKM":
 		args.statistical_analysis = "TPM"
 
 
