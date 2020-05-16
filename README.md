@@ -3,7 +3,7 @@ IsoXtractor: A tool to assess transcriptional activity within isochores
 
 <b>Description</b>: Given a genome, read directory and conditions file, IsoXtractor statistically analyses the TPM and RPKM scores of the number of reads identified in each isochore for each condition.
 
-<b>Installation</b>: To compile CNEFinder, please follow the instructions given in file INSTALL.
+<b>Installation</b>: To install IsoXtractor, please follow the instructions given in file INSTALL.
 ```
 usage: IsoXtractor.py [-h] -g GENOME -r READS_DIR -o OUTPUT_DIR -c CONDITIONS
                       [-w WINDOW_SIZE] [-s SEED_ERRORS] [-e TOTAL_ERRORS]
