@@ -1,7 +1,7 @@
-IsoXtractor: A tool to assess transcriptional activity within isochores
+IsoXpressor: A tool to assess transcriptional activity within isochores
 ===
 
-<b>Description</b>: Given a genome, read directory and conditions file, IsoXtractor statistically analyses the TPM and RPKM scores of the number of reads identified in each isochore for each condition.
+<b>Description</b>: Given a genome, read directory and conditions file, IsoXpressor statistically analyses the TPM and RPKM scores of the number of reads identified in each isochore for each condition.
 
 <b>Installation</b>: To install IsoXtractor, please follow the instructions given in file INSTALL.
 ```
@@ -39,7 +39,7 @@ optional arguments:
 
 ```
 
-<b>See https://github.com/lorrainea/IsoXtractor/wiki for more help.</b>
+<b>See https://github.com/lorrainea/IsoXpressor/wiki for more help.</b>
 
 <b>License</b>: GNU GPLv3 License; Copyright (C) 2020 Stilianos Arhondakis, Lorraine A. K. Ayad, Athanasia-Maria Dourou, Solon P. Pissis
 
