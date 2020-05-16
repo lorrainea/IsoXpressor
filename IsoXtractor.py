@@ -47,7 +47,7 @@ def parseArgs():
 		args.seed_length = 32
 	if args.threads == None:
 		args.threads = 1
-	if args.statistical_analysis != "TPM" or args.statistical_analysis != "RPKM":
+	if args.statistical_analysis != "TPM" and args.statistical_analysis != "RPKM":
 		args.statistical_analysis = "TPM"
 
 
