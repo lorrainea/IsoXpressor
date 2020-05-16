@@ -1,8 +1,7 @@
 Pre-installation Instructions
 =============================
 
-   This installation requires the pre-installation of a C++ compiler, 
-the cmake build system, and the libraries: boost and SeqAn.
+   This installation requires the pre-installation of the Python 2.7 compiler.
 
 For Linux, you can install these libraries via
 
@@ -12,6 +11,6 @@ Basic Instructions
 ==================
 
    
-After installation you can call IsoXtractor from this directory via
+After installation you can call IsoXpressor from this directory via
 
- $ python IsoXtractor.py -h
+ $ python IsoXpressor.py -h
