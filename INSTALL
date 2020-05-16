@@ -6,7 +6,7 @@ the cmake build system, and the libraries: boost and SeqAn.
 
 For Linux, you can install these libraries via
 
- $ ./pre-install.sh 
+ $ sudo ./pre-install.sh 
 
 Basic Instructions
 ==================

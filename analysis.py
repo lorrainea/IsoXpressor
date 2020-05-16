@@ -112,7 +112,7 @@ def computeConditions(conditions, conditions_val, isochores, total_reads, cond_c
 ###################################################################################
 
 
-def computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean):
+def computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean, lines):
 	#expression = [0] * cond_count #columns
 
 	for j in range(0, cond_count ):
@@ -389,7 +389,7 @@ def main():
 	mean = [0] * len(iso_family)
 	expression = [0] * cond_count
 	final_table = [0] * ( 1+len(iso_family) )
-	computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean)
+	computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean, lines)
 	avgExpression(output, isochores, expression, cond_count )
 	chromAvgExpression(output, cond_count, isochores, expression)
 	isoClassAvgExpression(final_table, iso_family, isochores, output, cond_count, expression, mean)
