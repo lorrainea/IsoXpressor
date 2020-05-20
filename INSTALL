@@ -1,4 +1,4 @@
-Pre-installation Instructions
+Libraries and Dependencies
 =============================
 
 The following programs and libraries are required to run IsoXpressor:
@@ -12,14 +12,26 @@ matplotlib
 biopython 
 numpy
 
-These can be installed on Ubuntu using:
+These can be installed on Debian using:
 
  $ sudo apt-get install libgd-dev libgif-dev
 
 and
 
  $ sudo apt-get install python-gd python-imaging python-matplotlib python-biopython python-numpy
+ 
 
+or on CentOS/RedHat using:
+
+ $ sudo yum install gd gd-devel giflib-devel
+
+and
+
+ $ sudo yum install python python-imaging python-matplotlib python-biopython python-numpy
+
+
+Pre-installation Instructions
+=============================
 
 To install IsoXpressor simply run the following command from within the downloaded IsoXpressor directory.
 
