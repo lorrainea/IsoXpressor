@@ -3,7 +3,7 @@ Libraries and Dependencies
 
 The following programs and libraries are required to run IsoXpressor:
 
-python 2.7
+python 2.7 or above
 libgd 
 giflib 
 gdmodule 
@@ -28,6 +28,14 @@ or on CentOS/RedHat using:
 and
 
  $ sudo yum install python python-imaging python-matplotlib python-biopython python-numpy
+
+Install dependencies using pip (to install python packages)
+
+$ pip install numpy
+$ pip install Pillow
+$ pip install matplotlib
+$ pip install gdmodule
+$ pip install biopython
 
 
 Pre-installation Instructions
