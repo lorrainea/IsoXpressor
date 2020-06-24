@@ -21,6 +21,7 @@ import subprocess
 
 import reads
 import analysis
+import graphs
 
 def parseArgs():
 	parser = argparse.ArgumentParser(description='Assessing transcriptional activity within isochores', epilog="", formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -178,6 +179,7 @@ def main():
 	analysis.avgExpression(output, isochores, expression, cond_count )
 	analysis.chromAvgExpression(output, cond_count, isochores, expression)
 	analysis.isoClassAvgExpression(final_table, iso_family, isochores, output, cond_count, expression, mean)
+	graphs.chromosome_profiles(args):
 
 if __name__ == "__main__":
     main()

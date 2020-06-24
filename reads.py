@@ -44,7 +44,7 @@ def align(aligned, output):
 	print("-Computing reads for " + str(aligned) )
 	temp_aligned = open(os.path.join(output, 'temp'+aligned+'.csv'), 'a')
 
-	temp_aligned.write(aligned.split('.fasta')[0]+'\n'),
+	temp_aligned.write(aligned.split('.fast')[0]+'\n'),
 
 	for isochore in os.listdir(os.path.join(output, 'isochores')):
 		aligned_iso = []
@@ -60,7 +60,7 @@ def align(aligned, output):
 
 			re = line.split('\t')
 
-			if( str(isochore).split('.fasta')[0] == re[7] ):
+			if( str(isochore).split('.fast')[0] == re[7] ):
 				aligned_iso.append(line)
 
 			
