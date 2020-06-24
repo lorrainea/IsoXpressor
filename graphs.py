@@ -40,6 +40,8 @@ def parseArgs():
 
 
 def chromosome_profiles(args):
+
+	print("-Creating chromosome profile graphs")
 	with open(os.path.join(args.output_dir,"avg_exp.csv")) as f:
 	    lines = f.readlines()
 
@@ -102,11 +104,16 @@ def chromosome_profiles(args):
 
 		fig, ax_arr  = plt.subplots(cond_count+1)
 
-		ax_arr[cond_count].bar(h3['start'], h3['gc'], color='red', width=h3['size'], linewidth=0, align='edge', label="H3")
-		ax_arr[cond_count].bar(h2['start'], h2['gc'], color='orange', width=h2['size'], linewidth=0, align='edge', label="H2")
-		ax_arr[cond_count].bar(h1['start'], h1['gc'], color='yellow', width=h1['size'], linewidth=0, align='edge', label="H1")
-		ax_arr[cond_count].bar(l2['start'], l2['gc'], color='dodgerblue', width=l2['size'], linewidth=0, align='edge', label="L2")
-		ax_arr[cond_count].bar(l1['start'], l1['gc'], color='lightskyblue', width=l1['size'], linewidth=0, align='edge', label="L1")
+		if( not h3['gc'].empty ):
+			ax_arr[cond_count].bar(h3['start'], h3['gc'], color='red', width=h3['size'], linewidth=0, align='edge', label="H3")
+		if( not h2['gc'].empty ):
+			ax_arr[cond_count].bar(h2['start'], h2['gc'], color='orange', width=h2['size'], linewidth=0, align='edge', label="H2")
+		if( not h1['gc'].empty ):
+			ax_arr[cond_count].bar(h1['start'], h1['gc'], color='yellow', width=h1['size'], linewidth=0, align='edge', label="H1")
+		if( not l2['gc'].empty ):
+			ax_arr[cond_count].bar(l2['start'], l2['gc'], color='dodgerblue', width=l2['size'], linewidth=0, align='edge', label="L2")	
+		if( not l1['gc'].empty ):
+			ax_arr[cond_count].bar(l1['start'], l1['gc'], color='lightskyblue', width=l1['size'], linewidth=0, align='edge', label="L1")
 		
 
 		colours = ['purple','green','brown','black','red'] #append more colours depending on conditions
