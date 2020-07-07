@@ -124,9 +124,11 @@ def chromosome_profiles(args):
 			ax_arr[k].xaxis.set_ticks([])
 			ax_arr[k].tick_params(axis='y', which='major', labelsize=15)
 
-		center = (cond_count+1 )/2
-		ax_arr[center].set_ylabel("Average "+ args.statistical_analysis+" Expression" , fontsize=20)
-		custom_ylim = (0, maxval+ (5.0/100.0)*maxval)
+		ax_arr[cond_count].tick_params(axis='y', which='major', labelsize=15)
+
+		center = (cond_count + 1)/2
+		ax_arr[center].set_ylabel("Average " + args.statistical_analysis+" Expression" , fontsize=20)
+		custom_ylim = (0, maxval+ (5.0/100.0)*maxval+1)
 		for k in range(0, cond_count):
 			plt.setp(ax_arr[k], ylim=custom_ylim)
 

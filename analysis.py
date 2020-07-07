@@ -119,7 +119,7 @@ def computeExpression(cond_count, total_reads, conditions_val, isochores, args, 
 		expression[j] = [0] * len(isochores) #rows
 
 
-	#compute average for each of the conditions
+	#compute average for each of the conditions	
 	if args.statistical_analysis == "NORM":
 		for j in range(0, cond_count):
 			for l in range (1, len(isochores) ):
@@ -138,17 +138,24 @@ def computeExpression(cond_count, total_reads, conditions_val, isochores, args, 
 	elif args.statistical_analysis == "TPM":
 		for j in range(0, cond_count):
 			rpk = 0
-			for l in range (1, len(isochores) ):
-				#total_reads_counter = j*cond_count
-				for k in range( 0, len(conditions_val[j]) ):
-					rpk = rpk +  float(isochores[l][conditions_val[j][k]]) / ( float(isochores[l][5]) / 1000.0 ) 
+			rpk_temp = []	
 
-			rpk = float(rpk) / 1000000.0
+			#total_reads_counter = j*cond_count
+			for k in range( 0, len(conditions_val[j]) ):
+				rpk = 0
+				for l in range (1, len(isochores) ):
+					rpk = rpk +  float(isochores[l][conditions_val[j][k]]) / ( float(isochores[l][5]) / 1000.0 ) 
+				rpk_temp.append(rpk)
+
+
+			for a in range(0, len(rpk_temp)):	
+				rpk_temp[a] = float(rpk_temp[a]/1000000.0)
+
 			for l in range (1, len(isochores) ):
 				avg = 0
 				#total_reads_counter = j*cond_count
 				for k in range( 0, len(conditions_val[j]) ):
-					tpm = ( float(isochores[l][conditions_val[j][k]]) / ( float(isochores[l][5]) / 1000.0 ) ) / float(rpk)
+					tpm =  ( float(isochores[l][conditions_val[j][k]]) * 1000.0) / ( float(isochores[l][5]) * rpk_temp[k] )
 					avg = avg + tpm
 
 				expression[j][l-1] = avg/ len(conditions_val[j])
@@ -164,7 +171,7 @@ def computeExpression(cond_count, total_reads, conditions_val, isochores, args, 
 				avg = 0
 				#total_reads_counter = j*cond_count
 				for k in range( 0, len(conditions_val[j]) ):
-					rpkm = ( float(isochores[l][conditions_val[j][k]]) / float( total_reads[int(conditions_val[j][k])-6] ) ) / float(isochores[l][5])
+					rpkm = ( float(isochores[l][conditions_val[j][k]]) / float( total_reads[int(conditions_val[j][k])-6] ) ) / (float(isochores[l][5])/1000)
 					avg = avg + rpkm
 
 				expression[j][l-1] = avg/ len(conditions_val[j])
