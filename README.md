@@ -41,6 +41,13 @@ optional arguments:
 
 <b>See https://github.com/lorrainea/IsoXpressor/wiki for more help.</b>
 
+<b>Citation</b>
+```
+Lorraine A K Ayad, Athanasia-Maria Dourou, Stilianos Arhondakis, Solon P Pissis, 
+IsoXpressor: a tool to assess transcriptional activity within isochores,
+Genome Biology and Evolution.
+```
+
 <b>License</b>: GNU GPLv3 License; Copyright (C) 2020 Stilianos Arhondakis, Lorraine A. K. Ayad, Athanasia-Maria Dourou, Solon P. Pissis
 
 
