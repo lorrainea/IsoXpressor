@@ -11,6 +11,7 @@ Pillow
 matplotlib 
 biopython 
 numpy
+pandas
 
 These can be installed on Debian using:
 
@@ -32,6 +33,7 @@ and
 Install dependencies using pip (to install python packages)
 
 $ pip install numpy
+$ pip install pandas
 $ pip install Pillow
 $ pip install matplotlib
 $ pip install gdmodule
