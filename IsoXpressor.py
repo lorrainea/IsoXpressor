@@ -175,7 +175,7 @@ def main():
 	expression = [0] * cond_count
 	final_table = [0] * ( 1+len(iso_family) )
 	mean = [0] * len(iso_family)
-	analysis.computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean)
+	analysis.computeExpression(cond_count, total_reads, conditions_val, isochores, args, final_table, expression, iso_family, mean, lines)
 	analysis.avgExpression(output, isochores, expression, cond_count )
 	analysis.chromAvgExpression(output, cond_count, isochores, expression)
 	analysis.isoClassAvgExpression(final_table, iso_family, isochores, output, cond_count, expression, mean)
