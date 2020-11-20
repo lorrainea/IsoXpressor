@@ -32,12 +32,12 @@ and
 
 Install dependencies using pip (to install python packages)
 
-$ pip install numpy
-$ pip install pandas
-$ pip install Pillow
-$ pip install matplotlib
-$ pip install gdmodule
-$ pip install biopython
+$ pip install --upgrade numpy
+$ pip install --upgrade pandas
+$ pip install --upgrade Pillow
+$ pip install --upgrade matplotlib
+$ pip install --upgrade gdmodule
+$ pip install --upgrade biopython
 
 
 Pre-installation Instructions
